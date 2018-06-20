@@ -1,0 +1,15 @@
+Making first request without resumption token
+First request SUCCESSFUL, using resumption tokens going forward.
+Saving current object at 0.xml
+Time: 2018-06-20 15:40:38.113324, Resumption Token: 2756774|1001
+Request SUCCESSFUL using Resumption Token 2756774|1001
+Saving current object at 1.xml
+Time: 2018-06-20 15:40:57.679904, Resumption Token: 2756774|2001
+Request SUCCESSFUL using Resumption Token 2756774|2001
+Saving current object at 2.xml
+Time: 2018-06-20 15:41:17.082343, Resumption Token: 2756774|3001
+Request SUCCESSFUL using Resumption Token 2756774|3001
+Saving current object at 3.xml
+Time: 2018-06-20 15:41:30.496239, Resumption Token: 
+Request SUCCESSFUL using Resumption Token 
+Saving current object at 4.xml
