@@ -1,1 +1,1 @@
-This is where the detailed summary will go.
+This is where a detailed summary will go.
