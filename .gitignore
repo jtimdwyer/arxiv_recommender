@@ -3,3 +3,4 @@
 data/xml
 data/json
 notebooks/01_Data_From_arXiv/postgres.txt
+notebooks/01_Data_From_arXiv/postgres.json
