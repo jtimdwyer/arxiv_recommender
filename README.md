@@ -24,9 +24,9 @@ In this repository, I build a content based recommender system for articles on t
 ## Collecting the Data
 1. Collected information about the individual papers on __arXiv__, and putting the following information into a PostgreSQL database
 
-|`id` | `created`| setspec | `title` | `abstract`|
+|`id`|`created`|`setspec`|`title` |`abstract`|
 |-|-|-|-|-|-|
-| 1609.01476 |2016-09-06| math|   Can decay be ascribed to classical noise? 	| No.\n|
+|1609.01476|2016-09-06|math|Can decay be ascribed to classical noise?|No.|
 
 ### Data Dictionary
 
