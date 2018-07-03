@@ -3,3 +3,4 @@
 data/xml
 data/json
 postgres.json
+__pycache__
