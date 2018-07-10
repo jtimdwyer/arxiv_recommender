@@ -4,3 +4,4 @@ data/xml
 data/json
 postgres.json
 __pycache__
+vectors/
