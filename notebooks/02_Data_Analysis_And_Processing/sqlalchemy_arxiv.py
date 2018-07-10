@@ -1,7 +1,7 @@
 # This loads the table classes and sessionmaker for connecting
 # to the postgres database serving all of the arxiv infomation
 
-from sqlalchemy import create_engine, Column, String, Integer, DATE, BOOLEAN, Float, ARRAY
+from sqlalchemy import create_engine, Column, String, Integer, DATE, BOOLEAN, Float, ARRAY, JSON
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
@@ -32,8 +32,7 @@ class articles_pandoc(Base, articles_base):
 class articles_similar(Base):
     __tablename__ = 'arxiv_similar'
     id = Column(String, primary_key=True)
-    recs = Column(ARRAY(String))
-    scores = Column(ARRAY(Float))
+    recs = Column(JSON)
 
     
 class articles_vectors(Base):
