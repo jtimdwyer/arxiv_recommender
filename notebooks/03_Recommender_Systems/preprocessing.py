@@ -26,13 +26,13 @@ def preprocess_recs(step_size=my_steps,
     low_iter = count(start=0, step=step_size)
     high_iter = count(start=step_size, step=step_size)
     
-    with open('./ids.log', 'w') as log_file:
-        for low, high in zip(low_iter, high_iter):
-            recs = compute_recs_batch(all_ids, low, high)
-            session = Session()
-            send_to_server(recs=recs, table_class=articles_similar, session=session)
-            session.close()
-            log_file.write(','.join(all_ids[low:high]))
+    for low, high in zip(low_iter, high_iter):
+        recs = compute_recs_batch(all_ids, low, high)
+        session = Session()
+        send_to_server(recs=recs, table_class=articles_similar, session=session)
+        session.close()
+        with open('./ids.log', 'a') as log_file:
+            log_file.write(','.join(all_ids[low:high]) + '\n')
 
 if __name__ == "__main__":
         preprocess_recs(Session=Session)
