@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request, render_template
-from sqlalchemy_arxiv import Session, articles_similar
+from sqlalchemy_arxiv import Session, articles_similar, arti
 from flask_utils import vectors, ids, request_recs, send_to_server, compute_recs_paper_id
 
 app = Flask(__name__)
@@ -29,4 +29,3 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=False, host='0.0.0.0', port=5000)
-            
