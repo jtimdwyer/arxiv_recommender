@@ -10,11 +10,9 @@ from itertools import count
 # to specify the batch size.
 # In case you don't just default to 100
 
-import sys
-if len(sys.argv) == 1:
-    my_steps = 100
-else:
-    my_steps = sys.argv[1]
+my_steps = int(input("How many to compute at once? "))
+starting_index = int(input("What position in all_ids to start at? "))
+
 
 
 def preprocess_recs(step_size=my_steps,
@@ -24,8 +22,8 @@ def preprocess_recs(step_size=my_steps,
                     all_ids=all_ids,
                    ):
 
-    low_iter = count(start=0, step=step_size)
-    high_iter = count(start=step_size, step=step_size)
+    low_iter = count(start=starting_index, step=step_size)
+    high_iter = count(start=starting_index+step_size, step=step_size)
 
     for low, high in zip(low_iter, high_iter):
         # this if else is just checking if
@@ -36,11 +34,12 @@ def preprocess_recs(step_size=my_steps,
             session = Session()
             send_to_server(recs=recs, table_class_recs=articles_similar, session=session)
             session.close()
+            print(f"Processed records {low} to {high-1}")
+
         else:
             break
 
         with open('./ids.log', 'a') as log_file:
-            log_file.write(','.join(all_ids[low:high]) + '\n')
-
+            log_file.write(','.join(all_ids[low:high]) + '\n')		
 if __name__ == "__main__":
         preprocess_recs()
