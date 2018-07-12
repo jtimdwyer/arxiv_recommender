@@ -5,3 +5,4 @@ data/json
 postgres.json
 __pycache__
 vectors/
+notebooks/03_Recommender_Systems/ids.log
