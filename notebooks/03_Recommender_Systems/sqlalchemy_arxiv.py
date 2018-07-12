@@ -15,7 +15,7 @@ class articles_base:
     setspec = Column(String)
     title = Column(String)
     abstract = Column(String)
-    
+
 class articles_raw(Base, articles_base):
     __tablename__ = 'arxiv_raw'
 
@@ -28,13 +28,13 @@ class articles_pandoc(Base, articles_base):
     __tablename__ = 'arxiv_pandoc'
     title_converted = Column(BOOLEAN)
     abstract_converted = Column(BOOLEAN)
-    
+
 class articles_similar(Base):
     __tablename__ = 'arxiv_similar'
     id = Column(String, primary_key=True)
     recs = Column(JSON)
 
-    
+
 class articles_vectors(Base):
     __tablename__ = 'arxiv_vectors'
     id = Column(String, primary_key=True)

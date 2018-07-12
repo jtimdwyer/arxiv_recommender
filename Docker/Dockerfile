@@ -8,7 +8,8 @@ RUN conda install -c conda-forge\
  wordcloud=1.4.1\
  beautifulsoup4=4.6.0\
  lxml=4.2.1\
- sqlalchemy=1.2.8
+ sqlalchemy=1.2.8\
+ psycopg2=2.7.5
 
 RUN conda install flask=1.0.2
 
