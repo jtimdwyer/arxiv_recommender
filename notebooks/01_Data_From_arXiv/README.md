@@ -23,4 +23,4 @@ __arXiv__ has an API for obtaining the metadata of every article they possess. T
 * *03_Update_Local_Data*
 > Again using the `requests` module can be used to update my copy of the database by getting information about newer papers from __arXiv__.
 * *04_Migrate_Postgres*
-> Used `SQLAlechemy` to create a table on a `Postgres` server to store the information from __arXiv__. In future notebooks, these interactions with the database are shifted to external modules and imported to avoid too much repetition. 
+> Used `SQLAlechemy` to create a table on a `Postgres` server to store the information from __arXiv__. In future notebooks, these interactions with the database are shifted to external modules and imported to avoid too much repetition.
