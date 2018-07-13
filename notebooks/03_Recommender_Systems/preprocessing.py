@@ -29,8 +29,8 @@ def preprocess_recs(step_size=10,
             session = Session()
             send_to_server(recs=recs, table_class_recs=articles_similar, session=session)
             session.close()
-            print(f"{datetime.today()} Processed records {low} to {high-1}")          
-            
+            print(f"{datetime.today()} Processed records {low} to {high-1}")
+
         else:
             break
 
