@@ -18,4 +18,5 @@ RUN git clone https://github.com/stanfordnlp/GloVe && \
  cd GloVe && \
  make
 
-#RUN wget `an s3 url with my full repo`
+#Eventurally this will be updated with a s3 link to get the full repo.
+#RUN wget
