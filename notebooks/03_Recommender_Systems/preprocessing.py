@@ -7,21 +7,14 @@ from flask_utils import vectors, all_ids, compute_recs_batch, send_to_server
 from itertools import count
 from datetime import datetime
 
-# You can pass an argument to this in the command line
-# to specify the batch size.
-# In case you don't just default to 100
-
-step_size = int(input("How many to compute at once? "))
-starting_index = int(input("What position in all_ids to start at? "))
 
 
-
-def preprocess_recs(step_size=step_size,
+def preprocess_recs(step_size=10,
                     Session=Session,
                     table_class=articles_similar,
                     vectors=vectors,
                     all_ids=all_ids,
-                    strting_index=starting_index,
+                    starting_index=0,
                    ):
 
     low_iter = count(start=starting_index, step=step_size)
@@ -44,4 +37,10 @@ def preprocess_recs(step_size=step_size,
         with open('./ids.log', 'a') as log_file:
             log_file.write(','.join(all_ids[low:high]) + '\n')
 if __name__ == "__main__":
-        preprocess_recs()
+    # You can pass an argument to this in the command line
+    # to specify the batch size.
+    # In case you don't just default to 100
+
+    step_size = int(input("How many to compute at once? "))
+    starting_index = int(input("What position in all_ids to start at? "))
+    preprocess_recs(step_size=step_size, starting_index=starting_index)

@@ -37,11 +37,11 @@ def sort_scores(scores, all_ids, cur_ids):
     score is the similarity score between the current article
     and the other component of the tuple.
     """
-    recs_index = scores.argsort(0)[-51:,:][::-1]
-    recs = {
-      id:[(all_ids[index], scores[index][0]) for index in recs_index[:, col_num]]
-        for col_num, id in enumerate(cur_ids)
-    }
+    recs = {}
+    for col_index, col in enumerate(scores.T):
+        col_id = cur_ids[col_index]
+        index_sorted = col.argsort(0)[-51:][::-1]
+        recs[col_id] = [(all_ids[i], col[i]) for i in index_sorted]
     return recs
 
 
