@@ -42,6 +42,6 @@ def preprocess_recs(step_size=step_size,
             break
 
         with open('./ids.log', 'a') as log_file:
-            log_file.write(','.join(all_ids[low:high]) + '\n')		
+            log_file.write(','.join(all_ids[low:high]) + '\n')
 if __name__ == "__main__":
         preprocess_recs()
