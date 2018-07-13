@@ -9,7 +9,6 @@
 ├── README.md
 ├── data
 ├── notebooks
-├── postgres.json
 ├── vectors
 └── word_clouds
 ```
@@ -43,9 +42,9 @@ For more details on the files within the directories, there is a `README.md` fil
 
 __Please keep the following caveats in mind:__
 
-1. There are large files that you will download by using this Dockerfile, in particular a plain text version of the tokenized abstracts of every article on __arXiv__. If you don't want to download the vectors and various files associated with the output of GloVe, you can remove the final run command from the Dockerfile.
+1. Some files in this repository reference a filed `postgres.json` that isn't present. This contains the credentials for accessing my postgres database and I don't really want to give this out.
 
-1. In addition to these large files you get when building from the Dockerfile, you should also get a copy of the postgres.json that is missing from this github repository with an account that has read access to the postgres database. This means you will not be able to run the code in the repository that updates the database.
+1. There are large files that you will download by using this Dockerfile, in particular a plain text version of the tokenized abstracts of every article on __arXiv__. If you don't want to download the vectors and various files associated with the output of GloVe, you can remove the final run command from the Dockerfile.
 
 1. The current implementation for fitting GloVe vectors on a corpus uses the [Stanford NLP C code](https://nlp.stanford.edu/projects/glove/). This process is intensive and can take up substantial memory and CPU resources.
 
