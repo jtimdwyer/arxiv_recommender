@@ -1,5 +1,5 @@
 # Final report
-> This summary contains the summaries in the `README.md` files for the three notebook directories in this project, as well as a final report at the end. The first three subsections are the same summaries as the ones in those directories. 
+> This summary contains the summaries in the `README.md` files for the three notebook directories in this project, as well as a final report at the end. The first three subsections are the same summaries as the ones in those directories. Some of the text of the Summary section is repeated from the [01_Similarity_of_Articles](notebooks/03_Recommender_Systems/01_Similarity_of_Articles.ipynb) notebook. 
 
 ## Data From Arxiv
 
@@ -29,8 +29,52 @@
 
 ## Summary
 
-> In manually inspecting some of the results I noticed some truly odd results. I chose a sample of 1000 articles and plotted their best similarities. and got such and such
+In evaluating the performance of the recommndations I tried three sample articles to generate requests for.
+
+One was chosen at random, one is an article I wrote, and the third is a paper that I had trouble finding good external material for when I was graduate school.
+
+### The random article
+
+Suppose someone wanted a recommendation for similar material to a physics article: [Bounds on the Probability of Success of Postselected Non-linear Sign Shifts Implemented with Linear Optics](https://arxiv.org/abs/quant-ph/0307015).
+I used the system I'd built to generate the following recommendations.
+
+1. [Feed-forward and its role in conditional linear optical quantum dynamics](https://arxiv.org/abs/quant-ph/0509075)
+1. [An efficient quantum filter for multiphoton states](https://arxiv.org/abs/quant-ph/0406008)
+1. [Minimum-energy pulses for quantum logic cannot be shared](https://arxiv.org/abs/quant-ph/0611137)
+1. [Linear optics implementation of general two-photon projective measurement](https://arxiv.org/abs/quant-ph/0207112)
+1. [Optimal Signal-to-Quantum Noise Ratio for Nonclassical Number States](https://arxiv.org/abs/quant-ph/9712020)
+
+A quick read of the abstracts of these articles tells me that they're all related to optics and and photon gates. I would say these recommendations are good, and that these paper are certainly similar, but I can't really judge how perfectly aligned they are.
+
+### My paper
+
+We do the same thing we did above, but with a paper I wrote with my former PhD thesis advisor Sergi Elizalde: [Wilf equivalence relations for consecutive patterns](https://arxiv.org/abs/1801.08262)
+
+The GloVe vector based recommender system generated the following top recommended articles.
+
+1. [On Pattern Avoiding Alternating Permutations](https://arxiv.org/abs/1212.2697)
+1. [Egge triples and unbalanced Wilf-equivalence](https://arxiv.org/abs/1410.0230)
+1. [The Length of the Longest Common Subsequence of Two Independent Mallows Permutations](https://arxiv.org/abs/1611.03840)
+1. [Quadrant marked mesh patterns in 123-avoiding permutations](https://arxiv.org/abs/1705.00164)
+1. [Avoidance of Partially Ordered Generalized Patterns of the form  k-σ-k](https://arxiv.org/abs/0805.1872)
+
+I can, without qualification, say that these are good recommendations. All of these papers absolutely are a part of a topic in combinatorial mathematics called __permutation patterns__. This is a very specialized sub-field of mathematics, and the recommender is definitely staying within this sub-field.
+
+
+### A non-example
+
+No recommender system is perfect, sometimes recommendations just don't make sense. Sometimes even if they do make sense, they're still bad. I was curious about what the system would recommend for the following article: [The Goulden-Jackson Cluster Method: Extensions, Applications and Implementations](https://arxiv.org/abs/math/9806036). This paper gave me a lot of trouble when I was in graduate school and I spent a lot of time looking for articles with similar content. I genuinely had a hard time at it so I really wanted to see what the system would say. The system generated the following recommendations:
+
+1. [The Number of Same-Sex Marriages in a Perfectly Bisexual Population is Asymptotically Normal](https://arxiv.org/abs/1106.5646)
+1. [Schwerdtfeger-Fillmore-Springer-Cnops Construction Implemented in GiNaC](https://arxiv.org/abs/cs/0512073)
+1. [Balls in Boxes: Variations on a Theme of Warren Ewens and Herbert Wilf](https://arxiv.org/abs/1106.5531)
+1. [Automatic Enumeration of Generalized Menage Numbers](https://arxiv.org/abs/1401.1089)
+1. [The Fedosov *-product in Mathematica](https://arxiv.org/abs/0801.3194)
+
+Looking at these papers, these are not very good recommendations. But it's easy to figure out what signal the system is picking up on as a similarity between the abstracts just by looking at them. Looking at the abstracts of these papers nothing about the content that indicates a strong relationship between these articles and the the article we're finding recommendations for. There is however on striking similarity in all of these abstracts. The all contain the phrase `this http url` in reference to a link. I have no idea if this is some old school way of describing links, but this idiom really seems to have boosted the scores between these articles.
 
 ## Future Evaluation
+
+
 
 > I'm planning to send this out to some friends to evaluate.
