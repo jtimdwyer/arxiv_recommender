@@ -22,10 +22,23 @@ First we show the results from the `pypandoc` and `detex` programs (i.e. determi
 Next we consider the rate of growth of submissions to __arXiV__.
 Finally, to get some kind of visual sense of the subject matter, we make some word clouds for the different general categories of articles.
 
-![][math_wc]
+### Math Word Cloud
 
-[math_wc]:(./word_clouds/math_clound.png)
+![][mathwc]
 
+[mathwc]:word_clouds/math_cloud.png
+
+### Computer Science Word Cloud
+
+![][cswc]
+
+[cswc]:word_clouds/cs_cloud.png
+
+### High Energy Physics Theory Word Cloud
+
+![][physics:hep-thwc]
+
+[physics:hep-thwc]:word_clouds/physics:hep-th_cloud.png
 
 In the third and [final notebook](./notebooks/02_Data_Analysis_And_Processing/03_GloVe_Word_Embeddings.ipynb), we finally actually construct a numerical representation of the articles. We do this so that we can work with something that we can actually mathematically manipulate.
 Our choice of GloVe vectors is, while not arbitrary, certainly not a condemnation of any other word embedding models.
