@@ -40,9 +40,12 @@ def sort_scores(scores, all_ids, cur_ids):
     recs = {}
     for col_num, col in enumerate(scores.T):
         article_id = cur_ids[col_num]
-        recs[article_id] = list(zip(col, all_ids))
-        recs[article_id].sort(key=lambda x: x[0], reverse=True)
-        recs[article_id] = recs[article_id][:51]
+        index_sorted = col.argsort()
+        index_recs = index_sorted[:-51:-1]
+        ids_sorted = [all_ids[i] for i in index_recs]
+        col_sorted = [col[i] for i in index_recs]
+        recs[article_id] = list(zip(col_sorted, ids_sorted))
+        recs[article_id] = recs[article_id]
     return recs
 
 
