@@ -67,7 +67,7 @@ __Please keep the following caveats in mind:__
 
 * *[postgres.json](postgres.json)*
 
-> A `JSON` file which contains credentials for a user on my `postgreSQL` database. Currently this user has select only permissions so cannot be used to the various database updating processes that some of these notebooks contain.
+> A `JSON` file which contains credentials for a user on my `postgreSQL` database. Currently this user has select only permissions so cannot be used to the various database updating processes that some of these notebooks contain. Not present in the Github repository.
 
 * *vectors*
 
