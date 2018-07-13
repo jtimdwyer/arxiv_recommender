@@ -1,6 +1,6 @@
 # Notebooks Directory
 
-This directory contains the main work of this project, mostly in Jupyter notebooks, but also a some python and  bash scripts.
+This directory contains the main work of this project, mostly in Jupyter notebooks, but also some python and bash scripts.
 
 ## Directory Structure
 
@@ -13,7 +13,7 @@ This directory contains the main work of this project, mostly in Jupyter noteboo
 ```
 
 
-Outline
+## Outline
 
 * *[01_Data_From_arXiv](./01_Data_From_arXiv)*
 
