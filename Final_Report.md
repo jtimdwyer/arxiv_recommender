@@ -1,5 +1,5 @@
 # Final report
-> This summary contains the summaries in the `README.md` files for the three notebook directories in this project, as well as a final report at the end. The first three subsections are the same summaries as the ones in those directories. Some of the text of the Summary section is repeated from the [01_Similarity_of_Articles](notebooks/03_Recommender_Systems/01_Similarity_of_Articles.ipynb) notebook. 
+> This summary contains the summaries in the `README.md` files for the three notebook directories in this project, as well as a final report at the end. The first three subsections are the same summaries as the ones in those directories. Some of the text of the Summary section is repeated from the [01_Similarity_of_Articles](notebooks/03_Recommender_Systems/01_Similarity_of_Articles.ipynb) notebook.
 
 ## Data From Arxiv
 
