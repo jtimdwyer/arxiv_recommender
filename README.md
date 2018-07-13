@@ -17,7 +17,12 @@
 
 ## Project Outline
 
-This project is a recommender system for articles on the pre-print repository [__arXiv__](https://arxiv.org). There are more than 1.4 million articles on __arXiv__ and it is used by physicists, mathematicians, computer scientists and others to allow access to their papers before they are formally reviewed and published in a journal. Some papers on __arXiv__ are never published. When Grigori Perelman won (and declined) the Fields Medal, arguably the most prestigious prize in mathematics, the work for which he won the award was never published in a journal. It was posted on __arXiv__.
+This project is a recommender system for articles on the pre-print repository [__arXiv__](https://arxiv.org). There are more than 1.4 million articles on __arXiv__ and it is used by physicists, mathematicians, computer scientists and others to allow access to their papers before they are formally reviewed and published in a journal. Some papers on __arXiv__ are never published. There are hundreds of papers submitted to __arXiv__ every day.
+
+![][submissions]
+
+[submissions]: notebooks/02_Data_Analysis_And_Processing/submissions.png
+When Grigori Perelman won (and declined) the Fields Medal, arguably the most prestigious prize in mathematics, the work for which he won the award was never published in a journal. It was posted on __arXiv__.
 
  From the Telegraph:
 >["If anybody is interested in my way of solving the problem, it's all there - let them go and read about it," said Dr Perelman. "I have published all my calculations. This is what I can offer the public."](https://www.telegraph.co.uk/news/1526782/Worlds-top-maths-genius-jobless-and-living-with-mother.html)
