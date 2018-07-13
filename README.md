@@ -22,7 +22,8 @@ This project is a recommender system for articles on the pre-print repository [_
 ![][submissions]
 
 [submissions]: notebooks/02_Data_Analysis_And_Processing/submissions.png
-When Grigori Perelman won (and declined) the Fields Medal, arguably the most prestigious prize in mathematics, the work for which he won the award was never published in a journal. It was posted on __arXiv__.
+
+When Grigori Perelman won (and declined) the Fields Medal in 2006, arguably the most prestigious prize in mathematics, the work for which he won the award was never published in a journal. It was posted on __arXiv__.
 
  From the Telegraph:
 >["If anybody is interested in my way of solving the problem, it's all there - let them go and read about it," said Dr Perelman. "I have published all my calculations. This is what I can offer the public."](https://www.telegraph.co.uk/news/1526782/Worlds-top-maths-genius-jobless-and-living-with-mother.html)
@@ -40,9 +41,11 @@ For more details on the files within the directories, there is a `README.md` fil
 
 > In this directory you will find a Dockerfile that defines a Docker image in which you should be able to run all of the notebooks and other code within this repository.
 
-> Please keep the following caveats in mind
-    1. There are large files that you will download by using this Dockerfile, in particular a plain text version of the tokenized abstracts of every article on __arXiv__. If you don't want to download the vectors and various files associated with the output of GloVe, you can remove the final run command from the Dockerfile.
-    1. The current implementation for fitting GloVe vectors on a corpus uses the [Stanford NLP C code](https://nlp.stanford.edu/projects/glove/). This process is intensive and can take up substantial memory and CPU resources.
+__Please keep the following caveats in mind:__
+
+1. There are large files that you will download by using this Dockerfile, in particular a plain text version of the tokenized abstracts of every article on __arXiv__. If you don't want to download the vectors and various files associated with the output of GloVe, you can remove the final run command from the Dockerfile.
+
+1. The current implementation for fitting GloVe vectors on a corpus uses the [Stanford NLP C code](https://nlp.stanford.edu/projects/glove/). This process is intensive and can take up substantial memory and CPU resources.
 
 
 * *[Final_Report.md](Final_Report.md)*
