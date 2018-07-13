@@ -25,4 +25,12 @@
 
 1. Sorting the resultant numbers so that we can keep those which score the highest. These articles with the highest scores will then be the recommended articles given to the user.
 
->
+> With this process in hand, I created a Flask app that will, upon request, look up an article in my postgres database and try to deliver recommendations. If there are none in the database it's because the preprocessing script hasn't gotten to that one yet. Since this is likely the case, for now at least, I'm keeping the matrix X in memory so that these requests can be handled. Once the database is updated with the newly requested article we deliver the recommendations to the user. Right now this is not implemented as a user-facing website but just delivers a `JSON` file with the information.
+
+## Summary
+
+> In manually inspecting some of the results I noticed some truly odd results. I chose a sample of 1000 articles and plotted their best similarities. and got such and such
+
+## Future Evaluation
+
+> I'm planning to send this out to some friends to evaluate.

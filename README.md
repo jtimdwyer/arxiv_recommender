@@ -26,6 +26,8 @@ In the modern research world, pre-print repositories like __arXiv__ are a first-
 
 In this repository I have built an system which, based on the abstract of an article on __arXiv__, tries to recommend articles that might also be of interest to the user. This system uses a `word embedding` vector, specifically the [GloVe word vector](https://nlp.stanford.edu/projects/glove/) developed by at the Natural language processing group at Stanford. GloVe word embedding vector that, like `word2vec` or `fastText` tries to capture not term frequencies (relative or absolute), but semantic relations between words. For a more in-depth explanation of how GloVe works, you can read the paper [GloVe: Global Vectors for Word Representation](https://nlp.stanford.edu/pubs/glove.pdf). Ironically enough, this paper doesn't seem to be on __arXiv__. There is also a briefer outline of the process in the GloVe notebook.
 
+
+
 ## Directory Outline
 For more details on the files within the directories, there is a `README.md` file within each subdirectory.
 

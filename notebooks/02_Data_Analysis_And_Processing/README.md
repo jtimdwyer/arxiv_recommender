@@ -8,9 +8,6 @@
 > In the third and [final notebook](03_GloVe_Word_Embeddings.ipynb), we finally actually construct a numerical representation of the articles. We do this so that we can work with something that we can actually mathematically manipulate. Our choice of GloVe vectors is, while not arbitrary, certainly not a condemnation of any other word embedding models. I would be very curious as to the results of similar systems using `word2vec` or `fastTest`.
 
 
-
-
-
 ## Directory Structure
 
 ```
@@ -18,6 +15,7 @@
 ├── 01_Processing_Latex.ipynb
 ├── 02_Exploring_Processed_LaTeX.ipynb
 ├── 03_GloVe_Word_Embeddings.ipynb
+├── README.md
 ├── glove.log
 ├── glove_arxiv.sh
 └── sqlalchemy_arxiv.py
